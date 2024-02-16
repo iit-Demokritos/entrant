@@ -20,4 +20,4 @@
 ### For downloading XBRL reports
 - Please, consult the following link for the specifications of both XBRL-XML and XBRL-JSON:
 https://specifications.xbrl.org/work-product-index-open-information-model-open-information-model.html
-- 
+- See `download_reports.py`
