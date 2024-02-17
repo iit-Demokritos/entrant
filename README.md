@@ -6,6 +6,7 @@
 ## Table of Contents
 - [Install](#install)
 - [Usage](#usage)
+- [Data](#data)
 
 ## Install
 - Before starting, ideally, it's recommended to switch to a virtual environment first via `conda` or `virtualenv` or Python's `venv` module.
