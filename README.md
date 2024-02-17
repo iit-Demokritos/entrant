@@ -17,7 +17,6 @@
 - Create a directory named `output` to store the results.
 - Run `extract_tables_multiprocess.py`.
 
-### For downloading XBRL reports
-- Please, consult the following link for the specifications of both XBRL-XML and XBRL-JSON:
-https://specifications.xbrl.org/work-product-index-open-information-model-open-information-model.html
+### For downloading excel reports
 - See `fetch_reports.py`
+- Pay attention to fair usage of EDGAR
