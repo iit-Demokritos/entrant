@@ -20,3 +20,6 @@
 ### For downloading excel reports
 - See `fetch_reports.py`
 - Pay attention to fair usage of EDGAR
+
+## Data
+- Data is hosted at Zenodo: https://zenodo.org/records/10667088
