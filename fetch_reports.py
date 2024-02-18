@@ -79,7 +79,7 @@ def download_cik_submission_jsons(cik):
         print(f"File {save_file} already exists.")
 
 
-def parse_submission_for_10K(cik, type_of_report):
+def parse_submission_for_report(cik, type_of_report):
     with open('./submissions/' + cik + '.json') as fp:
         submission = json.load(fp)
         forms = submission['filings']['recent']['form']
@@ -92,14 +92,18 @@ def parse_submission_for_10K(cik, type_of_report):
             accession_numbers.append(submission['filings']['recent']['accessionNumber'][idx])
             accession_num = submission['filings']['recent']['accessionNumber'][idx]
             accession_num = accession_num.replace('-', '')
-            url = f'https://www.sec.gov/Archives/edgar/data/{cik}/{accession_num}/Financial_Report.xlsx'
-            urls.append(url)
+            # Check if XBRL supported
+            if submission['filings']['recent']['isXBRL'][idx]:
+                url = f'https://www.sec.gov/Archives/edgar/data/{cik}/{accession_num}/Financial_Report.xlsx'
+                urls.append(url)
+            else:
+                print(f'Not XBRL available for {accession_num}.')
         with open(f'./urls_lists/{cik}.txt', 'w') as fw:
             for url in urls:
                 fw.write(url + '\n')
 
 
 if __name__ == "__main__":
-    # download_cik_submission_jsons('0000320193')
-    #parse_submission_for_10K('0000320193', '10-K')
+    download_cik_submission_jsons('0000320193')
+    parse_submission_for_report('0000320193', '10-K')
     download_excels('./urls_lists/0000320193.txt')
