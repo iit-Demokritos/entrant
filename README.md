@@ -1,3 +1,5 @@
+![python application](https://github.com/izavits/entrant/actions/workflows/python-app.yml/badge.svg)
+
 # ENTRANT: A Large Financial Dataset for Table Understanding
 
 > Extract and clean tables from financial xlsx files from EDGAR and convert them to JSON with
