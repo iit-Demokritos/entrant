@@ -38,6 +38,9 @@ def download_excels(excel_urls_list):
 
 
 def download_cik_submission_jsons(cik):
+    """
+    param: cik: the central index key for the company submission json
+    """
     save_file = os.path.join("submissions", f"{cik}.json")
     initial_submission_url = f"https://data.sec.gov/submissions/CIK{cik}.json"
     print(f"URL: {initial_submission_url}")
@@ -80,6 +83,10 @@ def download_cik_submission_jsons(cik):
 
 
 def parse_submission_for_report(cik, type_of_report):
+    """
+    param: cik: the central index key for the company
+    param: type_of_report: the type of report to search for (10-K, 10-Q, 8-K, ..)
+    """
     with open('./submissions/' + cik + '.json') as fp:
         submission = json.load(fp)
         forms = submission['filings']['recent']['form']
@@ -104,6 +111,12 @@ def parse_submission_for_report(cik, type_of_report):
 
 
 if __name__ == "__main__":
+    # An exanple for a company follows:
+    # It is advised that we must consider fair usage of EDGAR.
+    # Perform a few requests to get:
+    # - company submissions
+    # - urls for the required report types
+    # - excel files
     download_cik_submission_jsons('0000320193')
     parse_submission_for_report('0000320193', '10-K')
     download_excels('./urls_lists/0000320193.txt')
