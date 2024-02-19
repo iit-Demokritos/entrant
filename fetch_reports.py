@@ -117,7 +117,7 @@ def get_ciks():
     ciks = []
     with open('cik_ticker.tsv', "r") as f:
         file_lines = f.readlines()
-        for line in file_lines:
+        for line in file_lines[1:]:
             cik = line.split()[-1].strip()
             if len(cik) < 10:
                 zeros = (10 - len(cik)) * '0'
