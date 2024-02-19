@@ -1,4 +1,6 @@
 ![python application](https://github.com/izavits/entrant/actions/workflows/python-app.yml/badge.svg)
+![python lint](https://github.com/izavits/entrant/actions/workflows/python-lint.yml/badge.svg)
+
 
 # ENTRANT: A Large Financial Dataset for Table Understanding
 
