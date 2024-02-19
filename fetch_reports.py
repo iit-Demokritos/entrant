@@ -110,13 +110,35 @@ def parse_submission_for_report(cik, type_of_report):
                 fw.write(url + '\n')
 
 
+def get_ciks():
+    """
+    Get central index keys for companies
+    """
+    ciks = []
+    with open('cik_ticker.tsv', "r") as f:
+        file_lines = f.readlines()
+        for line in file_lines:
+            cik = line.split()[-1].strip()
+            if len(cik) < 10:
+                zeros = (10 - len(cik)) * '0'
+                cik = zeros + cik
+            ciks.append(cik)
+    return ciks
+
+
 if __name__ == "__main__":
-    # An exanple for a company follows:
-    # It is advised that we must consider fair usage of EDGAR.
+    # NOTE: Consider fair use of EDGAR.
     # Perform a few requests to get:
     # - company submissions
     # - urls for the required report types
-    # - excel files
-    download_cik_submission_jsons('0000320193')
-    parse_submission_for_report('0000320193', '10-K')
-    download_excels('./urls_lists/0000320193.txt')
+    # - Excel files
+    # ciks = get_ciks()
+    # for cik in ciks:
+    #    download_cik_submission_jsons(cik)
+    #    parse_submission_for_report(cik, '10-K')
+    #    download_excels(f'./urls_lists/{cik}.txt')
+    # Example for one company:
+    cik = '0000320193'
+    download_cik_submission_jsons(cik)
+    parse_submission_for_report(cik, '10-K')
+    download_excels(f'./urls_lists/{cik}.txt')
