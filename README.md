@@ -18,6 +18,7 @@
 - [Usage](#usage)
 - [Data](#data)
 - [Tests](#tests)
+- [Contributing](#contributing)
 - [License](#license)
 
 ## Install
@@ -39,6 +40,10 @@
 
 ## Tests
 Use `pytest` to run the unit tests.
+
+## Contributing
+
+See [the contributing file](CONTRIBUTING.md)!
 
 ## License
 The project is licensed under Creative Commons Attribution 4 license.
