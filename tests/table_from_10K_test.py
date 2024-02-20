@@ -4,12 +4,12 @@
 #
 
 import sys
-
-sys.path.append('../')
 import unittest
 from extract_tables import process_ws
 from openpyxl import load_workbook
 import os
+
+sys.path.append('../')
 
 
 class TestTableExtraction10K(unittest.TestCase):
@@ -29,7 +29,8 @@ class TestTableExtraction10K(unittest.TestCase):
         :return:
         """
         # Should have title "Document and Entity Information"
-        self.assertEqual(self.table_10K['Title'], 'Document and Entity Information - USD ($) $ in Billions')
+        self.assertEqual(self.table_10K['Title'],
+                         'Document and Entity Information - USD ($) $ in Billions')
 
     def test_table_rows_len(self):
         """
@@ -46,11 +47,10 @@ class TestTableExtraction10K(unittest.TestCase):
         """
         # Should have rows 0,1,2,34,39,44,49,54,59,64,69,74,79,84,89,94,99,
         # 104,109,114,119,124,129,134,139,144 as header
-        headers = [0, 1, 2, 34, 39, 44, 49, 54, 59, 64, 69, 74, 79, 84, 89, 94, 99, 104, 109, 114, 119, 124, 129, 134,
-                   139, 144]
+        headers = [0, 1, 2, 34, 39, 44, 49, 54, 59, 64, 69, 74, 79, 84, 89, 94, 99, 104, 109, 114, 119, 124,
+                   129, 134, 139, 144]
         for i in headers:
             self.assertEqual(self.table_10K['Cells'][i][0]['is_header'], True)
-
 
     def test_table_cells_len(self):
         """

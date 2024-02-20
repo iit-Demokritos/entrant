@@ -4,11 +4,11 @@
 #
 
 import sys
-
-sys.path.append('../')
 import unittest
 import os
 import json
+
+sys.path.append('../')
 
 
 class TestCellTypeClassificationInput(unittest.TestCase):

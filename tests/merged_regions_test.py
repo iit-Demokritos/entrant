@@ -4,12 +4,12 @@
 #
 
 import sys
-
-sys.path.append('../')
 import unittest
 from extract_tables import process_ws
 from openpyxl import load_workbook
 import os
+
+sys.path.append('../')
 
 
 class TestMergedRegions(unittest.TestCase):

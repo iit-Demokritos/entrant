@@ -4,12 +4,12 @@
 #
 
 import sys
-
-sys.path.append('../')
 import unittest
 from extract_tables import process_ws
 from openpyxl import load_workbook
 import os
+
+sys.path.append('../')
 
 
 class TestTableExtraction8K(unittest.TestCase):
@@ -50,8 +50,9 @@ class TestTableExtraction8K(unittest.TestCase):
         Test the table header
         :return:
         """
-        # Should have rows 0,1,22,27,32,37,42,47,52,57,62,67,72,77,82,87,92,97,102,107,112,117,122,127 as headers
-        headers = [0, 1, 22, 27, 32, 37, 42, 47, 52, 57, 62, 67, 72, 77, 82, 87, 92, 97, 102, 107, 112, 117, 122, 127]
+        # Rows 0,1,22,27,32,37,42,47,52,57,62,67,72,77,82,87,92,97,102,107,112,117,122,127 as headers
+        headers = [0, 1, 22, 27, 32, 37, 42, 47, 52, 57, 62, 67, 72, 77, 82, 87, 92, 97, 102, 107, 112, 117,
+                   122, 127]
         for i in headers:
             self.assertEqual(self.table_8K['Cells'][i][0]['is_header'], True)
         # For the 2nd document:

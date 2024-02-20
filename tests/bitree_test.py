@@ -4,12 +4,12 @@
 #
 
 import sys
-
-sys.path.append('../')
 import unittest
 from extract_tables import process_wb
 from openpyxl import load_workbook
 import os
+
+sys.path.append('../')
 
 
 class TestBiTreeExtraction10K(unittest.TestCase):
@@ -79,8 +79,8 @@ class TestBiTreeExtraction10K(unittest.TestCase):
             self.assertEqual(len(child['Cd']), childrens_per_child[val])
         # The coordinates of the children of the left root
         coordinates = [
-            0, 1, 2, 34, 39, 44, 49, 54, 59, 64, 69, 74, 79, 84, 89, 94, 99, 104, 109, 114, 119, 124, 129, 134,
-            139, 144
+            0, 1, 2, 34, 39, 44, 49, 54, 59, 64, 69, 74, 79, 84, 89, 94, 99, 104, 109, 114, 119, 124, 129,
+            134, 139, 144
         ]
         for val, child in enumerate(left_tree['Cd']):
             self.assertEqual(child['RI'], coordinates[val])

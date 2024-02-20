@@ -4,12 +4,12 @@
 #
 
 import sys
-
-sys.path.append('../')
 import unittest
 from extract_tables import process_wb
 from openpyxl import load_workbook
 import os
+
+sys.path.append('../')
 
 
 class TestWbTableExtraction10Q(unittest.TestCase):
@@ -40,7 +40,7 @@ class TestWbTableExtraction10Q(unittest.TestCase):
         # Should have the following titles for the first 7 tables
         titles = [
             'Cover Page - shares shares in Thousands',
-            'CONDENSED CONSOLIDATED STATEMENTS OF OPERATIONS (Unaudited) - USD ($) shares in Thousands, $ in Millions',
+            'CONDENSED CONSOLIDATED STATEMENTS OF OPERATIONS (Unaudited)-USD($)shares in Thousands, $ in M',
             'CONDENSED CONSOLIDATED STATEMENTS OF COMPREHENSIVE INCOME (Unaudited) - USD ($) $ in Millions',
             'CONDENSED CONSOLIDATED BALANCE SHEETS (Unaudited) - USD ($) $ in Millions',
             'CONDENSED CONSOLIDATED BALANCE SHEETS (Unaudited) (Parenthetical) - $ / shares',

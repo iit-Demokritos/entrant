@@ -4,12 +4,12 @@
 #
 
 import sys
-
-sys.path.append('../')
 import unittest
 from extract_tables import process_wb
 from openpyxl import load_workbook
 import os
+
+sys.path.append('../')
 
 
 class TestWbTableExtraction8K(unittest.TestCase):
@@ -71,7 +71,8 @@ class TestWbTableExtraction8K(unittest.TestCase):
         """
         # Should the following rows for headers
         headers = [
-            [0, 1, 22, 27, 32, 37, 42, 47, 52, 57, 62, 67, 72, 77, 82, 87, 92, 97, 102, 107, 112, 117, 122, 127]
+            [0, 1, 22, 27, 32, 37, 42, 47, 52, 57, 62, 67, 72, 77, 82, 87, 92, 97, 102, 107, 112, 117, 122,
+             127]
         ]
         for i, table_headers in enumerate(headers):
             for h in table_headers:
