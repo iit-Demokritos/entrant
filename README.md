@@ -3,7 +3,7 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 
-# ENTRANT: A Large Financial Dataset for Table Understanding
+# ENTRANT: *A Large Financial Dataset for Table Understanding*
 
 > Extract and clean tables from financial xlsx files from EDGAR and convert them to JSON with
 > bi-tree positional information and metadata.
