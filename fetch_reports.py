@@ -8,6 +8,7 @@ import numpy as np
 
 def download_excels(excel_urls_list):
     """
+    Download Excel files from the given list of Excel urls
     param: excel_urls_list: list of urls to download
     """
     with open(excel_urls_list) as fp:
@@ -39,6 +40,7 @@ def download_excels(excel_urls_list):
 
 def download_cik_submission_jsons(cik):
     """
+    Download the submission info in json format for the given cik id
     param: cik: the central index key for the company submission json
     """
     save_file = os.path.join("submissions", f"{cik}.json")
@@ -84,6 +86,7 @@ def download_cik_submission_jsons(cik):
 
 def parse_submission_for_report(cik, type_of_report):
     """
+    Parse the submission report for the given cik id and type of report to generate the list of Excel urls
     param: cik: the central index key for the company
     param: type_of_report: the type of report to search for (10-K, 10-Q, 8-K, ..)
     """
