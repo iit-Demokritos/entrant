@@ -1,11 +1,11 @@
 beautifulsoup4==4.11.1
 click==8.0.3
+ipython==8.10.0
 ipykernel==6.29.2
-ipython==7.29.0
 ipython-genutils==0.2.0
 ipywidgets==7.6.5
 jupyter-client==7.0.6
-jupyter-core==4.11.2
+jupyter-core==5.7.1
 MarkupSafe==2.0.1
 matplotlib==3.5.0
 matplotlib-inline==0.1.3
