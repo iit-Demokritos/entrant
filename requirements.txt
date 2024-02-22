@@ -1,6 +1,6 @@
 beautifulsoup4==4.11.1
 click==8.0.3
-ipykernel==6.5.0
+ipykernel==6.29.2
 ipython==7.29.0
 ipython-genutils==0.2.0
 ipywidgets==7.6.5
