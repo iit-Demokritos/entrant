@@ -22,6 +22,7 @@
 - [Tests](#tests)
 - [Contributing](#contributing)
 - [License](#license)
+- [Citation](#citation)
 
 ## Install
 - Before starting, ideally, it's recommended to switch to a virtual environment first via `conda` or `virtualenv`.
@@ -49,3 +50,16 @@ See [the contributing file](CONTRIBUTING.md)!
 
 ## License
 The project is licensed under Creative Commons Attribution 4 license.
+
+## Citation
+```
+@article{entrant2024,
+  title={ENTRANT: A Large Financial Dataset For Table Understanding},
+  author={Zavitsanos, Elias and Mavroeidis, Dimitris and Spyropoulou, Eirini and Fergadiotis, Manos and Paliouras Georgios},
+  journal={Nature Scientific Data},
+  pages={876},
+  volume = {11},
+  year={2024},
+  doi = {https://doi.org/10.1038/s41597-024-03605-5}
+}
+```
