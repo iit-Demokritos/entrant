@@ -11,7 +11,9 @@
 > Related dataset:
 > 
 > Zavitsanos, E., Mavroeidis, D., Spyropoulou, E., Fergadiotis, M., & Paliouras, G. (2024). ENTRANT: A Large Financial Dataset for Table Understanding [Data set]. Zenodo. https://doi.org/10.5281/zenodo.10667088
-> 
+>
+> Please cite the related paper as follows:
+> Zavitsanos, E., Mavroeidis, D., Spyropoulou, E. et al. ENTRANT: A Large Financial Dataset for Table Understanding. Sci Data 11, 876 (2024). https://doi.org/10.1038/s41597-024-03605-5
 
 ## Table of Contents
 - [Install](#install)
